@@ -16,8 +16,14 @@ print message
 #create list for encrypted message
 encrypted_message=[]
 #redefine via my dictionary
-for letter in message:
-        dictionary_alphabet.get ('t')
-        encrypted_message.append(letter)
-print 
+#for letter in message:
+#   encrypted_message.append(dictionary_alphabet.get (letter))
+#print encrypted_message
 
+#test if value is a letter
+#if letter.islpha():
+
+for letter in message:
+    if letter.isalpha():
+        encrypted_message.append(dictionary_alphabet.get (letter))
+print encrypted_message
