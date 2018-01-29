@@ -1,0 +1,17 @@
+import math
+from random import randint
+class Fraction:
+    numerator = "" #(randint)
+    denominator= "" #(randint)
+    
+    def __init__(self, numerator):
+        self.numerator=numerator
+    def __init__(self, denominator):
+        self.denominator=denominator
+    
+    def fraction(numerator, denominator):
+        print "numerator" + "/" +"denominator"
+    
+numerator=Fraction("numerator") 
+denominator=Fraction("denominator")
+print numerator.fraction
