@@ -9,20 +9,37 @@ class Fraction:
         self.denominator=(denominator)
     def fraction(self):
         print str(self.numerator) + "/" + str(self.denominator)
-    def add(fraction):
-        print str(fraction.numerator) + "+" + str(fraction.denominator)
-n=randint(0,100)
-d=randint(1,100)
-y=randint(1,100)
-z=randint(1,100)
-f=Fraction(n, d) 
-x=Fraction(y, z)
-f.fraction()
-x.fraction()
-
 #each fraction is in 2 PARTS: name.numerator and name.denominator
 #multiplying the denominators and numinators will get a new fraction
-#1.denominator*2.denominator= NEW DENOMINATOR
-#2.numerator * 1.denominator= numerator 1
-#2.denominator * 1.numerator= numerator 2
-#add numerators for NEW NUMERATOR
+#1.denominator*2.denominator= a
+#2.numerator * 1.denominator= b
+#2.denominator * 1.numerator= c
+#add numerators for NEW NUMERATOR 
+    def add(self, user2):
+        a=int(self.denominator)* int(user2.denominator)
+        b=int(user2.numerator)* int(self.denominator)
+        c=int (user2.denominator)* int(self.numerator)
+        print str(c+b) + "/" + str(a)
+        
+    def decimal(self):
+        int(self.fraction)*int(100)=d
+        print d
+        
+    def subtract(self, user2):
+        a=int(self.denominator)* int(user2.denominator)
+        b=int(user2.numerator)* int(self.denominator)
+        c=int (user2.denominator)* int(self.numerator)
+        print str(c-b) + "/" + str(a)
+    
+n=10
+d=12
+y=16
+z=18
+f=Fraction(n, d) 
+user2=Fraction(y, z)
+f.fraction()
+user2.fraction()
+#2 arguments in definition of function, so put tbe other user in parentheses
+f.add(user2)
+f.subtract(user2)
+user2.subtract(f)
