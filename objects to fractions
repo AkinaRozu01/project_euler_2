@@ -1,5 +1,6 @@
 import math
 from random import randint
+from fractions import gcd
 class Fraction:
     numerator = 0
     denominator= 0
@@ -22,14 +23,30 @@ class Fraction:
         print str(c+b) + "/" + str(a)
         
     def decimal(self):
-        int(self.fraction)*int(100)=d
-        print d
+        x=float(self.numerator)/float(self.denominator) 
+        print str(x)
         
     def subtract(self, user2):
         a=int(self.denominator)* int(user2.denominator)
         b=int(user2.numerator)* int(self.denominator)
         c=int (user2.denominator)* int(self.numerator)
         print str(c-b) + "/" + str(a)
+        
+    def mixedfraction(self):
+        x=int(self.numerator)/int(self.denominator)
+        y=int(self.numerator)%int(self.denominator)
+        z=int(self.denominator)
+        print str(x) + " " + str(y)+ "/" +str(z)
+        
+    def multiply(self, user2):
+        a=int(self.denominator)* int(user2.denominator)
+        b=int(user2.numerator)*int(self.numerator)
+        print str(b) + "/" + str(a)
+        
+    def divide(self, user2):
+        a=int(self.denominator)* int(user2.numerator)
+        b=int(user2.denominator)*int(self.numerator)
+        print str(b) + "/" + str(a)
     
 n=10
 d=12
@@ -37,9 +54,6 @@ y=16
 z=18
 f=Fraction(n, d) 
 user2=Fraction(y, z)
-f.fraction()
-user2.fraction()
 #2 arguments in definition of function, so put tbe other user in parentheses
-f.add(user2)
-f.subtract(user2)
-user2.subtract(f)
+f.divide(user2)
+f.multiply(user2)
