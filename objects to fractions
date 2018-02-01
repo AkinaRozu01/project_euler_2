@@ -47,6 +47,12 @@ class Fraction:
         a=int(self.denominator)* int(user2.numerator)
         b=int(user2.denominator)*int(self.numerator)
         print str(b) + "/" + str(a)
+        
+    def simplify(self):
+        x=gcd(int(self.numerator), int(self.denominator))
+        y=int(self.numerator)/x
+        z=int(self.denominator)/x
+        print str(y) + "/" + str(z)
     
 n=10
 d=12
@@ -57,3 +63,4 @@ user2=Fraction(y, z)
 #2 arguments in definition of function, so put tbe other user in parentheses
 f.divide(user2)
 f.multiply(user2)
+f.simplify()
