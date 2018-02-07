@@ -1,3 +1,4 @@
+#list approach
 import math
 number = 100
 sqrt = math.sqrt(number)
@@ -16,3 +17,12 @@ for digit in numbers:
             if is_prime==False:
                 numbers.remove(x)
 print numbers
+#object approach
+import math
+class Number:
+    digita= [range(1,100)]
+    def __init__(self, digit):
+        self.a=digita
+        
+    def switch(self):
+        self.a
